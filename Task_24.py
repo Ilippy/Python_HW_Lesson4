@@ -27,5 +27,7 @@ else:
     res = 0
     for i in range(size):
         summ = lst[i-1] + lst[i] + lst[(i+1)%size]
-        if summ > res: res = summ
-print(res)
+        if summ > res: 
+            res = summ
+            s = f"{lst[i-1]} + {lst[i]} + {lst[(i+1)%size]} ="
+    print(s, res)
