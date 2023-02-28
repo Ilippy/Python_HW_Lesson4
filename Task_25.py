@@ -8,12 +8,15 @@
 # Для решения данной задачи используйте функцию
 # .split()
 
-def getStrWithCount(lst: list) -> str:
-    res_list, res_str = [], ""
+def getStrWithCount(lst: list[str]) -> list[str]:
+    """Формируем результирующий список с простановкой количеством элементов"""
+    temp_list, res_list = [], []
     for item in lst:
-        res_str += f" {item}" if item not in res_list else f" {item}_{res_list.count(item)}"
-        res_list.append(item)
-    return res_str
+        res_list.append(item) if item not in temp_list else res_list.append(f"{item}_{temp_list.count(item)}")
+        temp_list.append(item)
+    return res_list
+
+
 
 lst = list(input("введите список через пробел\n").split())
-print(getStrWithCount(lst))
+print(*getStrWithCount(lst))

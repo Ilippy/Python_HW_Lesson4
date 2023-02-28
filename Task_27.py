@@ -11,6 +11,7 @@
 # Output: 13
 # from string import punctuation
 
+
 #list(input("Введите предлжение через пробел").split())
 d =set("""She sells sea shells on the sea shore The shells
 that she sells are sea shells I'm sure.So if she sells sea

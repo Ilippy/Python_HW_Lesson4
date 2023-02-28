@@ -12,15 +12,12 @@
 # собрать за один заход собирающий модуль, находясь перед некоторым кустом
 # заданной во входном файле грядки.
 
-# 4 -> 1 2 3 4
-# 9
+# Input: 2 2 1 3 2
+# Output: 7
 
-from random import randint
-size = int(input("Введите количество кустов\n"))
 
-lst = [randint(1,10) for _ in range(size)]
-print(*lst)
-
+lst = list(map(int, input().split()))
+size = len(lst)
 if size <= 3:
     print(sum(lst))
 else:
@@ -29,5 +26,5 @@ else:
         summ = lst[i-1] + lst[i] + lst[(i+1)%size]
         if summ > res: 
             res = summ
-            s = f"{lst[i-1]} + {lst[i]} + {lst[(i+1)%size]} ="
-    print(s, res)
+            ind = (i-1, i, (i+1)%size)
+    print(f"{lst[ind[0]]} + {lst[ind[1]]} + {lst[ind[2]]} = {res}")

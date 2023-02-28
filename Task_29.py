@@ -13,10 +13,10 @@
 
 
 # Ваня: 1: max_number 2: if n > max_number
-n = int(input())
-max_number = 1000      # max_number = -1
+n = int(input()) 
+max_number = 1000      # max_number = n
 while n != 0:
-    n = int(input())
+    n = int(input())  
     if max_number > n: # if n > max_number:
         max_number = n
 print(max_number)
@@ -24,13 +24,21 @@ print(max_number)
 
 # Петя: 1: while n != 0:, 2: max_number = n, 3: print(max_number)
 n = int(input())
-max_number = -1
+max_number = -1        # max_number = n
 while n < 0:           # while n != 0:
-    n = int(input())
+    n = int(input())   
     if max_number < n:  
         n = max_number # max_number = n
 print(n)               # print(max_number)
 
 # Победил Ваня
-print("Ваня совешил 2 ошибки, Петя совершил 3 ошибки")
+print("Ваня совешил 3 ошибки, Петя совершил 5 ошибки")
 print("Ваня победил")
+
+n = int(input())
+max_number = n
+while n != 0:
+    n = int(input())
+    if n > max_number:
+        max_number = n
+print(max_number)
