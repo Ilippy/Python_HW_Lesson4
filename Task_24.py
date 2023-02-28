@@ -14,6 +14,7 @@
 
 # 4 -> 1 2 3 4
 # 9
+
 from random import randint
 size = int(input("Введите количество кустов\n"))
 
@@ -24,7 +25,7 @@ if size <= 3:
     print(sum(lst))
 else:
     res = 0
-    for i in range(1,size-1):
-        summ = lst[i-1] + lst[i] + lst[i+1]
+    for i in range(size):
+        summ = lst[i-1] + lst[i] + lst[(i+1)%size]
         if summ > res: res = summ
 print(res)
