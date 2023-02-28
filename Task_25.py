@@ -10,10 +10,9 @@
 
 def getStrWithCount(lst: list[str]) -> list[str]:
     """Формируем результирующий список с простановкой количеством элементов"""
-    temp_list, res_list = [], []
-    for item in lst:
-        res_list.append(item) if item not in temp_list else res_list.append(f"{item}_{temp_list.count(item)}")
-        temp_list.append(item)
+    res_list = []
+    for i in range(len(lst)):
+        res_list.append(lst[i]) if lst[i] not in lst[:i] else res_list.append(f"{lst[i]}_{lst[:i].count(lst[i])}")
     return res_list
 
 
