@@ -22,7 +22,7 @@ while n != 0:
 print(max_number)
 
 
-# Петя: 1: < !=, 2: max_number = n, 3: print(max_number)
+# Петя: 1: while n != 0:, 2: max_number = n, 3: print(max_number)
 n = int(input())
 max_number = -1
 while n < 0:           # while n != 0:
@@ -32,3 +32,5 @@ while n < 0:           # while n != 0:
 print(n)               # print(max_number)
 
 # Победил Ваня
+print("Ваня совешил 2 ошибки, Петя совершил 3 ошибки")
+print("Ваня победил")
