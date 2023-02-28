@@ -16,7 +16,7 @@
 # Output: 7
 
 
-lst = list(map(int, input().split()))
+lst = list(map(int, input("Введите количество ягод на кустах через пробел\n").split()))
 size = len(lst)
 if size <= 3:
     print(sum(lst))
