@@ -18,4 +18,4 @@ shells on the sea shore I'm sure that the shells are sea
 shore shells""".replace("."," ").lower().split())
 
 
-print(sorted(d))
+print(len(d))
